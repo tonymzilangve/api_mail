@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="Overall-stat">
+    <h2>Сводная статистика</h2>
+    <ul>
+        <li>
+            Всего рассылок: {{ total_mail.count  }}
+        </li>
+        <li>
+            Всего отправленных сообщений: {{ total_msg.count  }}
+        </li>
+        <li>
+            Всего клиентов: {{ total_clients.count  }}
+        </li>
+    </ul>
+</div>
+
+<hr>
+
+<div id="active-mail">
+    <h3>Активные ({{ active_mail.count }})</h3>
+    {% for m in total_mail %}
+        <h4>ID: {{m.pk}} </h4>
+        <ul>
+            <li>
+                Отправлено сообщений: {{ m.messages.count }}
+            </li>
+            <li>
+                Кол-во клиентов: {{ m.clients.count }}
+            </li>
+        </ul>
+        <br>
+    {% endfor %}
+</div>
+<hr>
+
+<div id="inactive-mail">
+    <h3>Неактивные ({{ other_mail.count }})</h3>
+    {% for m in other_mail %}
+        <h4>ID: {{m.pk}} </h4>
+        <ul>
+            <li>
+                Отправлено сообщений: {{ m.messages.count }}
+            </li>
+            <li>
+                Кол-во клиентов: {{ m.clients.count }}
+            </li>
+        </ul>
+        <br>
+    {% endfor %}
+</div>
+
+</body>
+</html>

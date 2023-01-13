@@ -15,7 +15,7 @@ STATUS = (
 class Mail(models.Model):
     start_at = models.DateTimeField(verbose_name="Старт")
     text = models.TextField(max_length=1000, verbose_name="Текст")
-    clients = models.ManyToManyField('Client', verbose_name="Клиенты")
+    clients = models.ManyToManyField('Client', blank=True, verbose_name="Клиенты")
     stop_at = models.DateTimeField(verbose_name="Стоп")
     status = models.CharField(max_length=20, default=STATUS[0][0], blank=True, null=True, choices=STATUS, verbose_name='Статус')
     schedule = models.CharField(max_length=30,
@@ -35,7 +35,6 @@ class Client(models.Model):
                               help_text="7XXXXXXXXXX", verbose_name="Номер телефона")
     operator = models.IntegerField(blank=True, verbose_name="Оператор")
     timezone = models.CharField(max_length=32, choices=TIMEZONES, verbose_name="Часовой пояс")
-    # -> TimeZoneField
     tag = models.ManyToManyField('Tag', blank=True, verbose_name="Тэг")
     tag_list = models.TextField(max_length=200, blank=True, null=True, verbose_name="Список тэгов")
 

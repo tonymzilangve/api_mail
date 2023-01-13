@@ -64,7 +64,7 @@ class MailViewSet(viewsets.ModelViewSet):
                 send_mail_task.delay(mail_id)
                 print("Рассылка успешно выполнена!")
 
-            return Response({'status': 'Mail created'})
+            return Response(serializer.data)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -116,22 +116,24 @@ class MailViewSet(viewsets.ModelViewSet):
                 send_mail_task.delay(mail_id)
                 print("Рассылка успешно выполнена!")
 
-            return Response({'status': 'Mail updated!'})
+            return Response(serializer.data)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def destroy(self, request, pk=None, *args, **kwargs):
         try:
-            tasks = PeriodicTask.objects.filter(name__icontains=f"ID: {pk}")
+            mail = Mail.objects.get(pk=pk)
+        except:
+            return Response({'error': 'Данной рассылки не существует!'})
+
+        tasks = PeriodicTask.objects.filter(name__icontains=f"ID: {pk}")
+        if tasks:
             for task in tasks:
                 task.delete()
 
-            mail = Mail.objects.get(pk=pk)
-            mail.delete()
-        except:
-            return Response({'error': 'Данной рассылки не существует'})
-
-        return Response({'status': 'Mail deleted!'})
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class ClientViewSet(viewsets.ModelViewSet):

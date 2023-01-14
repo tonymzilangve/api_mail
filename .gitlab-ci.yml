@@ -2,7 +2,7 @@ stages:
 	- build
 	- test
 
-build:
+build-job:
 	stage: build
 	image: python-3.10
 	script:
@@ -18,7 +18,7 @@ build:
 	tags:
 		- mailinglist
 
-test:
+test-job:
 	stage: test
 	script:
 		- echo "Activating virtual environment..."

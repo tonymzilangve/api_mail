@@ -1,0 +1,77 @@
+mail\_api.migrations package
+============================
+
+Submodules
+----------
+
+mail\_api.migrations.0001\_initial module
+-----------------------------------------
+
+.. automodule:: mail_api.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0002\_mail\_schedule module
+------------------------------------------------
+
+.. automodule:: mail_api.migrations.0002_mail_schedule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0003\_alter\_client\_mobile\_alter\_mail\_schedule\_and\_more module
+-----------------------------------------------------------------------------------------
+
+.. automodule:: mail_api.migrations.0003_alter_client_mobile_alter_mail_schedule_and_more
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0004\_alter\_client\_operator\_alter\_client\_tag\_list\_and\_more module
+----------------------------------------------------------------------------------------------
+
+.. automodule:: mail_api.migrations.0004_alter_client_operator_alter_client_tag_list_and_more
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0005\_remove\_message\_status\_mail\_time\_gap\_end\_and\_more module
+------------------------------------------------------------------------------------------
+
+.. automodule:: mail_api.migrations.0005_remove_message_status_mail_time_gap_end_and_more
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0006\_alter\_mail\_status\_alter\_message\_mail module
+---------------------------------------------------------------------------
+
+.. automodule:: mail_api.migrations.0006_alter_mail_status_alter_message_mail
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0007\_alter\_mail\_status module
+-----------------------------------------------------
+
+.. automodule:: mail_api.migrations.0007_alter_mail_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mail\_api.migrations.0008\_alter\_message\_options\_alter\_tag\_options\_and\_more module
+-----------------------------------------------------------------------------------------
+
+.. automodule:: mail_api.migrations.0008_alter_message_options_alter_tag_options_and_more
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mail_api.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

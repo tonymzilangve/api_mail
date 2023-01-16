@@ -1,0 +1,22 @@
+.. mailinglist documentation master file, created by
+   sphinx-quickstart on Sun Jan 15 15:15:26 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to mailinglist's documentation!
+=======================================
+
+Project LAUNCH
+==================
+
+`` python -m venv venv ``
+
+
+.. toctree::
+   :maxdepth: 2
+
+   modules/mail_api.rst
+   modules/mail_api.tests.rst
+   modules/mailinglist.rst
+   modules/manage.rst
+   modules/modules.rst

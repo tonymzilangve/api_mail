@@ -5,7 +5,6 @@
 
 Welcome to mailinglist's documentation!
 =======================================
-
 Project LAUNCH
 ==================
 
@@ -16,6 +15,20 @@ Project LAUNCH
 * python manage.py runserver
 * celery -A mailinglist worker -l info --pool=solo
 * celery -A mailinglist beat -l INFO
+
+########################
+Acomplished EXTRA Tasks:
+########################
+
+* 1.Code Testing
+* 2.GitLab CI
+* 3.Docker-Compose
+* 5.Swagger UI
+* 6.Admin Web UI
+* 7.Oauth2 autorization
+* 8.Send statistics to email
+* 11.Time interval for mailinglist
+
 
 .. toctree::
    :maxdepth: 2

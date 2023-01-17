@@ -9,12 +9,19 @@ Welcome to mailinglist's documentation!
 Project LAUNCH
 ==================
 
-`` python -m venv venv ``
-
+* pwd
+* python -m venv venv
+* venv/Scripts/activate
+* pip install --no-cache-dir -r requirements.txt
+* python manage.py runserver
+* celery -A mailinglist worker -l info --pool=solo
+* celery -A mailinglist beat -l INFO
 
 .. toctree::
    :maxdepth: 2
 
+
+   accomplished.rst
    modules/mail_api.rst
    modules/mail_api.tests.rst
    modules/mailinglist.rst

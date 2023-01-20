@@ -47,7 +47,12 @@ def send_mail_task(request, mail_id, *args, **kwargs):
 
             res = requests.post(f'{os.getenv("EXTERNAL_URL")}/{msg.id}', headers=headers, data=json.dumps(payload))
             print(res.status_code)
-            print(res.json(), '\nОчередное сообщение отправлено!')
+
+            if res.status_code != 200:
+                msg.sent_status = False
+                print(res.json(), '\nСообщение не отправлено!')
+            else:
+                print(res.json(), '\nОчередное сообщение отправлено!')
 
         return "Рассылка завершена!"
 

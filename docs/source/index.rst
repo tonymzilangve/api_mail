@@ -8,13 +8,55 @@ Welcome to mailinglist's documentation!
 Project LAUNCH
 ==================
 
-* pwd
-* python -m venv venv
-* venv/Scripts/activate
-* pip install --no-cache-dir -r requirements.txt
-* python manage.py runserver
-* celery -A mailinglist worker -l info --pool=solo
-* celery -A mailinglist beat -l INFO
+* Pull the project from Github
+
+.. code-block:: console
+
+   git clone https://github.com/schMok0uTr0nie/api_mail.git
+
+* Create virtual environment
+
+.. code-block:: console
+
+   python -m pip install --upgrade pip
+   python -m venv venv
+
+* Activate virtual environment
+
+.. code-block:: console
+
+   venv/Scripts/activate
+
+* Install dependencies
+
+.. code-block:: console
+
+   pip install --no-cache-dir -r requirements.txt
+
+* Migrate the database tables
+
+.. code-block:: console
+
+   python manage.py migrate
+
+* Start a development server
+
+.. code-block:: console
+
+   python manage.py runserver
+
+* Run celery worker
+
+.. code-block:: console
+
+   celery -A mailinglist worker -l info --pool=solo
+
+* Run celery beat
+
+.. code-block:: console
+
+   celery -A mailinglist beat -l INFO
+
 
 ########################
 Acomplished EXTRA Tasks:

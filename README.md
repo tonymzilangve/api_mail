@@ -1,3 +1,3 @@
-https://api-mail.readthedocs.io/en/latest/
+DOCX = https://api-mail.readthedocs.io/en/latest/
 
-sending mails to External API
+sending mails to External API 
